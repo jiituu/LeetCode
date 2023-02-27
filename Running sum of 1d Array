@@ -1,0 +1,8 @@
+class Solution(object):
+    def runningSum(self, nums):
+        sumarray=[]
+        sum=0
+        for i in nums:
+            sum=sum+i
+            sumarray.append(sum)
+        return sumarray
