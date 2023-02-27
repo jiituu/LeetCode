@@ -1,0 +1,13 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        return len(set(nums)) != len(nums)
+        
+        
+        //class Solution(object):
+  //  def containsDuplicate(self, nums):
+     //   s=0
+      //  for i in nums:
+         //   if i==nums[s] and nums.index(i)!=s:
+         //       return True
+        //    s=s+1
+      //  return False //Time limit excedded . changes neccesary 
