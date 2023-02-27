@@ -1,0 +1,10 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        hold=[]
+        for i,num1 in enumerate(nums):
+
+                for j,num2 in enumerate(nums):
+                    if num2+num1==target and  i!=j and i not in hold:
+                        hold.extend([i,j])
+    
+        return hold
