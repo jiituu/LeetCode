@@ -1,0 +1,13 @@
+class Solution(object):
+    def maxSubArray(self, nums):
+        sum = 0 
+        number = -10001
+        for i in range(len(nums)):
+            sum =sum + nums[i]
+            if sum > number: 
+                number = sum
+            if sum < 0:
+                sum = 0
+        return number
+        
+       //idk why it works jeezzz
