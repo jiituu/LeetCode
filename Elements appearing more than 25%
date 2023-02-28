@@ -1,0 +1,8 @@
+class Solution(object):
+    def findSpecialInteger(self, arr):
+        perc=len(arr)//4
+        for i in set(arr):
+            if arr.count(i)>perc:
+                return i
+
+        
