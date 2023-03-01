@@ -1,0 +1,9 @@
+class Solution(object):
+    def sortSentence(self, s):
+        words=s.split()
+        right=[0]*(len(words)+1)
+        for i in words:
+            right[int(i[-1])]=i[0:-1]
+    
+        right1=" ".join(right[1:])
+        return right1
