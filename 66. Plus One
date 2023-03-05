@@ -1,0 +1,11 @@
+class Solution(object):
+    def plusOne(self, digits):
+        oo=""
+        nn=""
+        diigits=[]
+        for i in digits:
+            oo=oo+str(i)
+        nn=int(oo)+1
+        for i in str(nn):
+            diigits.append(int(i))
+        return diigits
