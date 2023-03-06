@@ -1,0 +1,10 @@
+class Solution(object):
+    def findKthPositive(self, arr, k):
+        br=[]
+        for i in range(1,10001):
+            if i not in arr:
+                br.append(i)
+                if len(br)==k:
+                    break
+            pass
+        return br[k-1]
