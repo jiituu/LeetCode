@@ -1,0 +1,13 @@
+class Solution(object):
+    def zeroFilledSubarray(self, nums):
+        n = len(nums)
+        left, right = 0, 0
+        count = 0
+        while right < n:
+            if nums[right] == 0:
+                count += right - left + 1
+                right += 1
+            else:
+                right += 1
+                left = right
+        return count
