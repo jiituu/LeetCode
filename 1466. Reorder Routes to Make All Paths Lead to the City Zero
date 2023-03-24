@@ -1,0 +1,23 @@
+from collections import defaultdict, deque
+
+class Solution(object):
+    def minReorder(self, n, connections):
+
+        graph = defaultdict(list)
+        for src, dest in connections:
+            graph[src].append((dest, 1))
+            graph[dest].append((src, 0))
+        
+        q = deque([0])
+        visited = set([0])
+        num_changes = 0
+        
+        while q:
+            curr = q.popleft()
+            for child, cost in graph[curr]:
+                if child not in visited:
+                    visited.add(child)
+                    num_changes += cost
+                    q.append(child)
+                    
+        return num_changes
