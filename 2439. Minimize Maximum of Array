@@ -1,0 +1,10 @@
+class Solution(object):
+    def minimizeArrayValue(self, nums):
+        res=0
+        maxi=s=nums[0]
+        for i in range (1,len(nums)):
+            s+=nums[i]
+            if nums[i]>maxi:
+                maxi=(s+i)/(i+1)
+            res=max(maxi,res)
+        return res
